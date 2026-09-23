@@ -1,0 +1,45 @@
+.controls {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+// Botones tipo minimizar/cerrar: cuadrados de esquinas muy redondeadas,
+// con el glyph dibujado en CSS (no un carácter unicode) para no depender
+// de que la fuente lo tenga. Los extremos de los trazos van redondeados.
+.button {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  border-radius: 6px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 999px;
+    background: var(--color-ink);
+  }
+}
+
+.minimize::before {
+  width: 9px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+}
+
+.close::before,
+.close::after {
+  width: 10px;
+  height: 2px;
+}
+.close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

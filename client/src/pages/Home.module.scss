@@ -1,0 +1,56 @@
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy {
+  max-width: 600px;
+}
+
+.hello {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1;
+  margin: 0 0 24px;
+  color: var(--color-ink);
+}
+
+.aboutText {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-ink);
+  margin: 0 0 32px;
+  height: 9em;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+// Botones tipo "post-it": círculo, borde negro grueso, alternando los dos
+// tonos de rosa de la paleta en vez de copiar los colores de la referencia.
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--color-ink);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-on-accent);
+  text-decoration: none;
+  text-align: center;
+  background: var(--color-primary);
+
+  &:hover {
+    background: var(--color-accent);
+  }
+}

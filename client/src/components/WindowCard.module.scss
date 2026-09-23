@@ -1,0 +1,78 @@
+.wrap {
+  position: relative;
+  height: 100%;
+}
+
+.shadow {
+  position: absolute;
+  inset: 0;
+  background: var(--color-accent);
+  border: 2px solid var(--color-ink);
+  transform: translate(9px, 14px);
+  z-index: 0;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+}
+
+$inset: 18px;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 10px 6px $inset;
+  background: var(--color-primary);
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  color: var(--color-on-accent);
+}
+
+// Ajuste óptico de cómo se apoyan los controles en este header puntual:
+// la forma de los botones vive en WindowControls.
+.controls {
+  margin-bottom: 3px;
+}
+
+.body {
+  flex: 1;
+  padding: 16px $inset;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--color-ink);
+
+  // Achica la sangría default del navegador en las listas para que el
+  // texto aproveche más ancho de línea.
+  ul {
+    margin: 0;
+    padding-left: 18px;
+
+    li::marker {
+      color: var(--color-accent);
+    }
+  }
+}
+
+// Selector de elemento suelto (no clase): en CSS Modules esto no queda
+// scopeado a WindowCard, aplica a cualquier <p> del sitio. Baja adrede su
+// especificidad (0,0,1) para que una sola clase le gane sin !important.
+p {
+  margin: 0 0 6px;
+}
