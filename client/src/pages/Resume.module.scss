@@ -6,6 +6,11 @@
   flex: 1;
 }
 
+.spacer {
+  height: 20px;
+  flex-shrink: 0;
+}
+
 .row {
   display: flex;
   gap: 24px;
@@ -55,4 +60,51 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 0;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+}
+
+.skillTag {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-ink);
+  background: var(--color-primary);
+  color: var(--color-on-accent);
+}
+
+.languageRow {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.languageHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.languageLabel {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.languageLevel {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-ink);
 }

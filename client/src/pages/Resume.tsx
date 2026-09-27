@@ -6,6 +6,7 @@ import {
   MapPinIcon,
 } from '@phosphor-icons/react';
 import WindowCard from '../components/WindowCard';
+import ProgressBar from '../components/ProgressBar';
 import { useLanguage } from '../context/LanguageContext';
 import styles from './Resume.module.scss';
 
@@ -123,21 +124,29 @@ export default function Resume() {
         </WindowCard>
 
         <WindowCard title={content.sectionTitles.skills}>
-          <ul>
+          <ul className={styles.skillTags}>
             {content.skills.map((skill) => (
-              <li key={skill}>{skill}</li>
+              <li key={skill} className={styles.skillTag}>
+                {skill}
+              </li>
             ))}
           </ul>
         </WindowCard>
 
         <WindowCard title={content.sectionTitles.languages}>
           {content.languages.map((entry) => (
-            <p key={entry.language}>
-              <strong>{entry.language}</strong> — {entry.level}
-            </p>
+            <div key={entry.language} className={styles.languageRow}>
+              <div className={styles.languageHeader}>
+                <p className={styles.languageLabel}>{entry.language}</p>
+                <span className={styles.languageLevel}>{entry.level}</span>
+              </div>
+              <ProgressBar value={entry.proficiency} />
+            </div>
           ))}
         </WindowCard>
       </div>
+
+      <div className={styles.spacer} />
     </div>
   );
 }

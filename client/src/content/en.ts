@@ -1,26 +1,31 @@
-import type { CvContent } from './types'
+import type { TranslatedContent } from './types'
 
-export const en: CvContent = {
-  name: 'Berenice Toranza',
+export const en: TranslatedContent = {
   role: 'Full Stack Developer',
   intro:
     "Full Stack Developer specialized in frontend, with 7+ years building production web applications. I enjoy working in agile teams, owning the features I build, and learning something new with every project. I'm a career switcher from tourism, which shows in how I communicate with clients and teams.",
+  nav: {
+    home: 'Home',
+    resume: 'CV',
+    projects: 'Projects',
+    contact: 'Contact',
+    phone: 'Phone',
+    email: 'Email',
+    findMeOnline: 'Find Me Online',
+    showMore: 'Show more',
+    showLess: 'Show less',
+  },
   sectionTitles: {
     hello: 'Hello',
     contact: 'Contact',
     about: 'About Me',
     education: 'Education',
     experience: 'Experience',
-    skills: 'Technologies',
+    skills: 'Skills',
     languages: 'Languages',
   },
   contact: {
     location: 'Paris, France',
-    phone: '+33 07 53 72 76 88',
-    email: 'btoranza@gmail.com',
-    linkedin: 'www.linkedin.com/in/btoranza',
-    // TODO: pegar tu URL real de GitHub.
-    github: 'https://github.com/',
   },
   about: [
     'Experienced Full Stack Developer, specialized in JavaScript.',
@@ -115,21 +120,45 @@ export const en: CvContent = {
     },
   ],
   skills: [
-    'HTML5, CSS3 (SASS), Responsive Design',
-    'JavaScript (ES6+), TypeScript',
+    'HTML5',
+    'CSS3 (SASS)',
+    'Responsive Design',
+    'JavaScript (ES6+)',
+    'TypeScript',
     'Svelte',
-    'Node.js, Nest.js',
-    'REST APIs: Swagger, Postman',
+    'Angular +18',
+    'React',
+    'Node.js',
+    'Nest.js',
+    'REST APIs',
+    'Swagger',
+    'Postman',
     'MongoDB',
-    'Docker, Kubernetes',
-    'Angular +18, React',
-    'Agile Methodologies, Jira',
+    'Docker',
+    'Kubernetes',
     'GitLab',
+    'Agile Methodologies',
+    'Jira',
+    'AI-Assisted Development',
+    'Claude Code',
+    'Copilot',
   ],
   languages: [
-    { language: 'Spanish', level: 'Native' },
-    { language: 'English', level: 'Bilingual - C2' },
-    { language: 'French', level: 'Bilingual - C2' },
-    { language: 'Portuguese', level: 'Intermediate - B1' },
+    { language: 'Spanish', level: 'Native', proficiency: 100 },
+    { language: 'English', level: 'C2', proficiency: 100 },
+    { language: 'French', level: 'C1', proficiency: 85 },
+    { language: 'Portuguese', level: 'B1', proficiency: 55 },
+  ],
+  projects: [
+    {
+      id: 1,
+      description:
+        "A full-stack web app that simulates a real sales organization, with multiple teams, configurable bonus rules, and interactive dashboards. Users can create and manage sales records and customers directly in the app. It automates monthly bonus calculations based on sales performance, tracks each salesperson's and team's progress against their goals, and gives finance departments clear visibility into sales metrics and compensation.",
+    },
+    {
+      id: 2,
+      description:
+        'A React app to manage a vehicle registry — create, edit and delete records with fields like brand, model, color and license plate. Built entirely client-side, with form validation and inline editing, as a technical assessment for D3 Sistemas. One of my very first React projects, early in my transition into development.',
+    },
   ],
 }

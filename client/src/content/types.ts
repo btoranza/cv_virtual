@@ -16,12 +16,97 @@ export interface EducationEntry {
 export interface LanguageEntry {
   language: string
   level: string
+  proficiency: number
+}
+
+export interface ProjectEntry {
+  id: number
+  name: string
+  description: string
+  stackFrontend: string[]
+  stackBackend: string[]
+  repoUrl: string
+  demoUrl?: string
+  image?: string
+  image2?: string
+}
+
+export interface SharedProject {
+  id: number
+  name: string
+  stackFrontend: string[]
+  stackBackend: string[]
+  repoUrl: string
+  demoUrl?: string
+  image?: string
+  image2?: string
+}
+
+export interface SharedContent {
+  name: string
+  contact: {
+    phone: string
+    email: string
+    linkedin: string
+    github: string
+  }
+  projects: SharedProject[]
+}
+
+export interface TranslatedProject {
+  id: number
+  description: string
+}
+
+export interface TranslatedContent {
+  role: string
+  intro: string
+  nav: {
+    home: string
+    resume: string
+    projects: string
+    contact: string
+    phone: string
+    email: string
+    findMeOnline: string
+    showMore: string
+    showLess: string
+  }
+  sectionTitles: {
+    hello: string
+    contact: string
+    about: string
+    education: string
+    experience: string
+    skills: string
+    languages: string
+  }
+  contact: {
+    location: string
+  }
+  about: string[]
+  education: EducationEntry[]
+  experience: ExperienceEntry[]
+  skills: string[]
+  languages: LanguageEntry[]
+  projects: TranslatedProject[]
 }
 
 export interface CvContent {
   name: string
   role: string
   intro: string
+  nav: {
+    home: string
+    resume: string
+    projects: string
+    contact: string
+    phone: string
+    email: string
+    findMeOnline: string
+    showMore: string
+    showLess: string
+  }
   sectionTitles: {
     hello: string,
     contact: string
@@ -43,4 +128,5 @@ export interface CvContent {
   experience: ExperienceEntry[]
   skills: string[]
   languages: LanguageEntry[]
+  projects: ProjectEntry[]
 }

@@ -51,28 +51,24 @@ $inset: 18px;
 
 .body {
   flex: 1;
+  min-height: 0;
   padding: 16px $inset;
   text-align: left;
   font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.9;
   color: var(--color-ink);
-
-  // Achica la sangría default del navegador en las listas para que el
-  // texto aproveche más ancho de línea.
-  ul {
-    margin: 0;
-    padding-left: 18px;
-
-    li::marker {
-      color: var(--color-accent);
-    }
-  }
 }
 
-// Selector de elemento suelto (no clase): en CSS Modules esto no queda
-// scopeado a WindowCard, aplica a cualquier <p> del sitio. Baja adrede su
-// especificidad (0,0,1) para que una sola clase le gane sin !important.
 p {
   margin: 0 0 6px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 18px;
+
+  li::marker {
+    color: var(--color-accent);
+  }
 }

@@ -15,13 +15,13 @@ export default function Home() {
 
         <nav className={styles.actions}>
           <Link to='/resume' className={styles.button}>
-            Resume
+            {content.nav.resume}
           </Link>
           <Link to='/projects' className={styles.button}>
-            Projects
+            {content.nav.projects}
           </Link>
           <Link to='/contact' className={styles.button}>
-            Contact
+            {content.nav.contact}
           </Link>
         </nav>
       </div>

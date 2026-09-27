@@ -1,26 +1,31 @@
-import type { CvContent } from './types'
+import type { TranslatedContent } from './types'
 
-export const es: CvContent = {
-  name: 'Berenice Toranza',
+export const es: TranslatedContent = {
   role: 'Desarrolladora Full Stack',
   intro:
     'Desarrolladora Full Stack especializada en frontend, con más de 7 años construyendo aplicaciones web en producción. Me gusta trabajar en equipos ágiles, tomar ownership de las features que construyo y seguir aprendiendo con cada proyecto nuevo. Vengo de una reconversión profesional desde el turismo, algo que se nota en cómo me comunico con clientes y equipos.',
+  nav: {
+    home: 'Inicio',
+    resume: 'CV',
+    projects: 'Proyectos',
+    contact: 'Contacto',
+    phone: 'Teléfono',
+    email: 'Email',
+    findMeOnline: 'Encontrame Online',
+    showMore: 'Ver más',
+    showLess: 'Ver menos',
+  },
   sectionTitles: {
     hello: 'Hola',
     contact: 'Contacto',
     about: 'Sobre Mí',
     education: 'Formación',
     experience: 'Experiencia',
-    skills: 'Tecnologías',
+    skills: 'Competencias',
     languages: 'Idiomas',
   },
   contact: {
     location: 'París, Francia',
-    phone: '+33 07 53 72 76 88',
-    email: 'btoranza@gmail.com',
-    linkedin: 'www.linkedin.com/in/btoranza',
-    // TODO: pegar tu URL real de GitHub.
-    github: 'https://github.com/',
   },
   about: [
     'Desarrolladora Full Stack con experiencia, especializada en JavaScript.',
@@ -115,21 +120,45 @@ export const es: CvContent = {
     },
   ],
   skills: [
-    'HTML5, CSS3 (SASS), Diseño Responsive',
-    'JavaScript (ES6+), TypeScript',
+    'HTML5',
+    'CSS3 (SASS)',
+    'Diseño Responsive',
+    'JavaScript (ES6+)',
+    'TypeScript',
     'Svelte',
-    'Node.js, Nest.js',
-    'APIs REST: Swagger, Postman',
+    'Angular +18',
+    'React',
+    'Node.js',
+    'Nest.js',
+    'APIs REST',
+    'Swagger',
+    'Postman',
     'MongoDB',
-    'Docker, Kubernetes',
-    'Angular +18, React',
-    'Metodologías Ágiles, Jira',
+    'Docker',
+    'Kubernetes',
     'GitLab',
+    'Metodologías Ágiles',
+    'Jira',
+    'Desarrollo asistido por IA',
+    'Claude Code',
+    'Copilot',
   ],
   languages: [
-    { language: 'Español', level: 'Nativo' },
-    { language: 'Inglés', level: 'Bilingüe - C2' },
-    { language: 'Francés', level: 'Bilingüe - C2' },
-    { language: 'Portugués', level: 'Intermedio - B1' },
+    { language: 'Español', level: 'Nativo', proficiency: 100 },
+    { language: 'Inglés', level: 'C2', proficiency: 100 },
+    { language: 'Francés', level: 'C1', proficiency: 85 },
+    { language: 'Portugués', level: 'B1', proficiency: 55 },
+  ],
+  projects: [
+    {
+      id: 1,
+      description:
+        'Aplicación web full-stack que simula una organización de ventas real, con múltiples equipos, reglas de bonos configurables y dashboards interactivos. Los usuarios pueden crear y gestionar ventas y clientes directamente en la aplicación. Automatiza el cálculo de bonos mensuales según la performance de ventas, trackea el progreso de cada vendedor y de cada equipo contra sus objetivos, y le da a finanzas visibilidad clara sobre las métricas de ventas y la compensación.',
+    },
+    {
+      id: 2,
+      description:
+        'Aplicación en React para gestionar un registro de vehículos — crear, editar y eliminar registros con campos como marca, modelo, color y patente. Funciona completamente del lado del cliente, con validación de formularios y edición inline, hecha como prueba técnica para D3 Sistemas. Uno de mis primerísimos proyectos en React, al comienzo de mi transición al desarrollo.',
+    },
   ],
 }

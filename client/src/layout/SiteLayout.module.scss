@@ -5,17 +5,20 @@
 }
 
 .header {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
   padding: 24px 40px;
   flex-wrap: wrap;
+  border-bottom: 2px solid var(--color-ink);
 }
 
 .identity {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 20px;
 }
 
@@ -50,32 +53,18 @@
   color: var(--color-ink);
 }
 
-// Ícono decorativo de la identidad (no es un link, por eso sin hover).
+// Ícono decorativo de la identidad. weight="bold" es un solo trazo de
+// color parejo, no necesita el truco de dos capas.
 .brandIcon {
-  position: relative;
-  width: 26px;
-  height: 26px;
-}
-
-.brandFill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: var(--color-primary);
-}
-
-.brandOutline {
-  position: absolute;
-  top: 0;
-  left: 0;
+  flex-shrink: 0;
   color: var(--color-ink);
 }
 
 // Corazón decorativo: mismas dos capas que el ícono de home.
 .heartIcon {
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
 }
 
@@ -94,12 +83,12 @@
 }
 
 .mark {
-  width: 12px;
-  height: 12px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: var(--color-accent);
   flex-shrink: 0;
-  border: 2px solid var(--color-ink);
+  border: 1.5px solid var(--color-ink);
 }
 
 .name {
@@ -121,7 +110,7 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 18px;
   font-family: var(--font-body);
   font-size: 15px;
 }
@@ -129,14 +118,36 @@
 .nav a {
   color: var(--color-ink);
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
+  font-weight: 500;
 }
 
 .navDivider {
   color: var(--color-accent);
+}
+
+.navLink,
+.navLinkWide {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 32% -6px;
+    z-index: -1;
+    background: var(--color-primary);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.navLinkWide {
+  min-width: 70px;
 }
 
 .languageSwitcher {
@@ -146,6 +157,7 @@
 }
 
 .main {
+  position: relative;
   flex: 1;
   display: flex;
 }
@@ -165,7 +177,7 @@
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 14px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   color: var(--color-on-accent);
 }
 
