@@ -14,6 +14,7 @@ export const es: TranslatedContent = {
     findMeOnline: 'Encontrame Online',
     showMore: 'Ver más',
     showLess: 'Ver menos',
+    downloadCv: 'Descargar CV',
   },
   sectionTitles: {
     hello: 'Hola',
@@ -26,6 +27,22 @@ export const es: TranslatedContent = {
   },
   contact: {
     location: 'París, Francia',
+  },
+  contactForm: {
+    intro: '¿Tenés una propuesta, un proyecto o simplemente querés saludar? Mandame un mensaje y te respondo a la brevedad.',
+    name: 'Nombre',
+    email: 'Email',
+    message: 'Mensaje',
+    namePlaceholder: 'Tu nombre',
+    emailPlaceholder: 'vos@ejemplo.com',
+    messagePlaceholder: 'Contame un poco sobre tu proyecto u oportunidad...',
+    send: 'Enviar mensaje',
+    sending: 'Enviando...',
+    success: '¡Gracias! Tu mensaje fue enviado, te voy a responder pronto.',
+    error: 'Algo salió mal. Probá de nuevo o escribime directamente por email.',
+    nameRequired: 'Ingresá tu nombre.',
+    emailInvalid: 'Ingresá un email válido.',
+    messageRequired: 'Escribí un mensaje.',
   },
   about: [
     'Desarrolladora Full Stack con experiencia, especializada en JavaScript.',
@@ -158,7 +175,17 @@ export const es: TranslatedContent = {
     {
       id: 2,
       description:
-        'Aplicación en React para gestionar un registro de vehículos — crear, editar y eliminar registros con campos como marca, modelo, color y patente. Funciona completamente del lado del cliente, con validación de formularios y edición inline, hecha como prueba técnica para D3 Sistemas. Uno de mis primerísimos proyectos en React, al comienzo de mi transición al desarrollo.',
+        'Aplicación en React para gestionar un registro de vehículos, permitiendo crear, editar y eliminar registros con campos como marca, modelo, color y patente. Funciona completamente del lado del cliente, con validación de formularios y edición inline, hecha como prueba técnica para D3 Sistemas. Uno de mis primerísimos proyectos en React, al comienzo de mi transición al desarrollo.',
+    },
+    {
+      id: 3,
+      description:
+        'Aplicación en React + TypeScript que trae personajes de Star Wars desde una API simulada y muestra una lista paginada y con búsqueda. Incluye búsqueda en tiempo real con debouncing, paginación, y estados de carga, vacío y error bien manejados.',
+    },
+    {
+      id: 4,
+      description:
+        'Dos ejercicios de maquetado front-end realizados para procesos de selección, unidos bajo una sola landing page: una landing animada hecha con HTML, SCSS y TypeScript, y una página de catálogo de notebooks hecha con HTML y CSS puro. Entre mis primerísimos trabajos, pero donde ya se nota mi costado detallista, en una muestra de maquetado semántico y estilos desde cero, sin ningún framework.',
     },
   ],
 }

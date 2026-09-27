@@ -14,6 +14,7 @@ export const fr: TranslatedContent = {
     findMeOnline: 'Me trouver en ligne',
     showMore: 'Voir plus',
     showLess: 'Voir moins',
+    downloadCv: 'Télécharger le CV',
   },
   sectionTitles: {
     hello: 'Hello',
@@ -26,6 +27,22 @@ export const fr: TranslatedContent = {
   },
   contact: {
     location: 'Paris, France',
+  },
+  contactForm: {
+    intro: "Une opportunité, un projet, ou juste envie de dire bonjour ? Envoyez-moi un message, je vous répondrai rapidement.",
+    name: 'Nom',
+    email: 'Email',
+    message: 'Message',
+    namePlaceholder: 'Votre nom',
+    emailPlaceholder: 'vous@exemple.com',
+    messagePlaceholder: 'Parlez-moi un peu de votre projet ou opportunité...',
+    send: 'Envoyer le message',
+    sending: 'Envoi...',
+    success: 'Merci ! Votre message a été envoyé, je vous répondrai bientôt.',
+    error: "Une erreur s'est produite. Réessayez ou écrivez-moi directement par email.",
+    nameRequired: 'Merci de renseigner votre nom.',
+    emailInvalid: 'Merci de renseigner un email valide.',
+    messageRequired: 'Merci d\'écrire un message.',
   },
   about: [
     'Développeuse Full Stack expérimentée, spécialisée en JavaScript.',
@@ -158,7 +175,17 @@ export const fr: TranslatedContent = {
     {
       id: 2,
       description:
-        "Application React pour gérer un registre de véhicules — créer, modifier et supprimer des fiches avec des champs comme la marque, le modèle, la couleur et la plaque d'immatriculation. Fonctionne entièrement côté client, avec validation de formulaire et édition en ligne, réalisée comme test technique pour D3 Sistemas. L'un de mes tout premiers projets React, au début de ma reconversion vers le développement.",
+        "Application React pour gérer un registre de véhicules, permettant de créer, modifier et supprimer des fiches avec des champs comme la marque, le modèle, la couleur et la plaque d'immatriculation. Fonctionne entièrement côté client, avec validation de formulaire et édition en ligne, réalisée comme test technique pour D3 Sistemas. L'un de mes tout premiers projets React, au début de ma reconversion vers le développement.",
+    },
+    {
+      id: 3,
+      description:
+        "Application React + TypeScript qui récupère des personnages Star Wars depuis une API simulée et affiche une liste paginée et consultable par recherche. Inclut une recherche en temps réel avec debouncing, la pagination, et des états de chargement, vide et d'erreur bien gérés.",
+    },
+    {
+      id: 4,
+      description:
+        "Deux exercices de maquette front-end réalisés pour des processus de recrutement, réunis sous une seule landing page : une landing animée en HTML, SCSS et TypeScript, et une page catalogue d'ordinateurs portables en HTML et CSS pur. Parmi mes tout premiers projets, mais on y voit déjà mon sens du détail, dans une démonstration de markup sémantique et de style réalisés sans aucun framework.",
     },
   ],
 }

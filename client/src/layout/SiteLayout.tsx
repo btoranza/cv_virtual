@@ -11,6 +11,7 @@ import { useLanguage } from '../context/LanguageContext';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import ThemeToggle from '../components/ThemeToggle';
 import ScrollToTopButton from '../components/ScrollToTopButton';
+import ColorPicker from '../components/ColorPicker';
 import styles from './SiteLayout.module.scss';
 
 export default function SiteLayout() {
@@ -74,6 +75,7 @@ export default function SiteLayout() {
       <main className={styles.main}>
         <Outlet />
         <ScrollToTopButton footerRef={footerRef} />
+        <ColorPicker footerRef={footerRef} />
       </main>
 
       <footer className={styles.footer} ref={footerRef}>

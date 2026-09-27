@@ -6,6 +6,32 @@
   flex: 1;
 }
 
+.topBar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 2px solid var(--color-ink);
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-on-accent);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--color-accent);
+  }
+}
+
 .spacer {
   height: 20px;
   flex-shrink: 0;
@@ -26,7 +52,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 3px;
 
   &:last-child {
     margin-bottom: 0;
@@ -53,6 +79,7 @@
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
+  margin-bottom: 3px;
 }
 
 .experienceRole {

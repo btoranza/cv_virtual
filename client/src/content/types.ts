@@ -71,6 +71,7 @@ export interface TranslatedContent {
     findMeOnline: string
     showMore: string
     showLess: string
+    downloadCv: string
   }
   sectionTitles: {
     hello: string
@@ -83,6 +84,22 @@ export interface TranslatedContent {
   }
   contact: {
     location: string
+  }
+  contactForm: {
+    intro: string
+    name: string
+    email: string
+    message: string
+    namePlaceholder: string
+    emailPlaceholder: string
+    messagePlaceholder: string
+    send: string
+    sending: string
+    success: string
+    error: string
+    nameRequired: string
+    emailInvalid: string
+    messageRequired: string
   }
   about: string[]
   education: EducationEntry[]
@@ -106,6 +123,7 @@ export interface CvContent {
     findMeOnline: string
     showMore: string
     showLess: string
+    downloadCv: string
   }
   sectionTitles: {
     hello: string,
@@ -122,6 +140,22 @@ export interface CvContent {
     email: string
     linkedin: string
     github: string
+  }
+  contactForm: {
+    intro: string
+    name: string
+    email: string
+    message: string
+    namePlaceholder: string
+    emailPlaceholder: string
+    messagePlaceholder: string
+    send: string
+    sending: string
+    success: string
+    error: string
+    nameRequired: string
+    emailInvalid: string
+    messageRequired: string
   }
   about: string[]
   education: EducationEntry[]

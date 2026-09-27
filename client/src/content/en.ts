@@ -14,6 +14,7 @@ export const en: TranslatedContent = {
     findMeOnline: 'Find Me Online',
     showMore: 'Show more',
     showLess: 'Show less',
+    downloadCv: 'Download CV',
   },
   sectionTitles: {
     hello: 'Hello',
@@ -26,6 +27,22 @@ export const en: TranslatedContent = {
   },
   contact: {
     location: 'Paris, France',
+  },
+  contactForm: {
+    intro: "Have a role, a project or just want to say hi? Send me a message and I'll get back to you soon.",
+    name: 'Name',
+    email: 'Email',
+    message: 'Message',
+    namePlaceholder: 'Your name',
+    emailPlaceholder: 'you@example.com',
+    messagePlaceholder: 'Tell me a bit about your project or opportunity...',
+    send: 'Send message',
+    sending: 'Sending...',
+    success: "Thanks! Your message has been sent, I'll get back to you soon.",
+    error: 'Something went wrong. Please try again or email me directly.',
+    nameRequired: 'Please enter your name.',
+    emailInvalid: 'Please enter a valid email.',
+    messageRequired: 'Please write a message.',
   },
   about: [
     'Experienced Full Stack Developer, specialized in JavaScript.',
@@ -158,7 +175,17 @@ export const en: TranslatedContent = {
     {
       id: 2,
       description:
-        'A React app to manage a vehicle registry — create, edit and delete records with fields like brand, model, color and license plate. Built entirely client-side, with form validation and inline editing, as a technical assessment for D3 Sistemas. One of my very first React projects, early in my transition into development.',
+        'A React app to manage a vehicle registry, letting users create, edit and delete records with fields like brand, model, color and license plate. Built entirely client-side, with form validation and inline editing, as a technical assessment for D3 Sistemas. One of my very first React projects, early in my transition into development.',
+    },
+    {
+      id: 3,
+      description:
+        'A React + TypeScript app that fetches Star Wars characters from a mocked API and renders a searchable, paginated list. Includes real-time search with debouncing, pagination, and proper loading, empty and error states.',
+    },
+    {
+      id: 4,
+      description:
+        'Two front-end markup exercises from hiring processes, combined under one landing page: an animated landing page built with HTML, SCSS and TypeScript, and a laptop catalog page built with plain HTML and CSS. Among my very first projects, but you can already see my attention to detail in a showcase of semantic markup and styling from scratch, without any framework.',
     },
   ],
 }
