@@ -1,12 +1,9 @@
-import dns from "node:dns";
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 dotenv.config();
-
-dns.setDefaultResultOrder("ipv4first");
 
 const app = express();
 app.use(cors());
@@ -14,16 +11,7 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-  connectionTimeout: 10_000,
-  greetingTimeout: 10_000,
-  socketTimeout: 10_000,
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -51,19 +39,20 @@ app.post("/contact", async (req, res) => {
   const cleanName = stripControlChars(name);
   const cleanEmail = stripControlChars(email);
 
-  try {
-    await transporter.sendMail({
-      from: `"${cleanName}" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER,
-      replyTo: cleanEmail,
-      subject: `New message from ${cleanName} via CV site`,
-      text: `${message}\n\nFrom: ${cleanName} <${cleanEmail}>`,
-    });
-    res.json({ ok: true });
-  } catch (error) {
+  const { error } = await resend.emails.send({
+    from: "CV Website <onboarding@resend.dev>",
+    to: process.env.GMAIL_USER!,
+    replyTo: cleanEmail,
+    subject: `New message from ${cleanName} via CV site`,
+    text: `${message}\n\nFrom: ${cleanName} <${cleanEmail}>`,
+  });
+
+  if (error) {
     console.error("Failed to send contact email:", error);
-    res.status(500).json({ ok: false, error: "Failed to send email" });
+    return res.status(500).json({ ok: false, error: "Failed to send email" });
   }
+
+  res.json({ ok: true });
 });
 
 app.listen(PORT, () => {
