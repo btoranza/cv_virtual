@@ -19,8 +19,6 @@ function getInitialTheme(): Theme {
   } catch {
     // localStorage no disponible (modo privado, storage bloqueado, etc.)
   }
-  // Sin preferencia guardada: arrancamos respetando el modo del sistema.
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark'
   return 'light'
 }
 
