@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { PaperPlaneTiltIcon } from '@phosphor-icons/react'
+import { CircleNotchIcon, PaperPlaneTiltIcon } from '@phosphor-icons/react'
 import WindowCard from '../components/WindowCard'
 import Toast from '../components/Toast'
 import Confetti from '../components/Confetti'
@@ -115,7 +115,11 @@ export default function Contact() {
             </div>
 
             <button className={styles.submit} type="submit" disabled={status === 'sending'}>
-              <PaperPlaneTiltIcon size={16} weight="bold" />
+              {status === 'sending' ? (
+                <CircleNotchIcon size={16} weight="bold" className={styles.spinner} />
+              ) : (
+                <PaperPlaneTiltIcon size={16} weight="bold" />
+              )}
               {status === 'sending' ? contactForm.sending : contactForm.send}
             </button>
 
