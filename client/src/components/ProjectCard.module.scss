@@ -116,3 +116,13 @@
     opacity: 0.6;
   }
 }
+
+@media (max-width: 480px) {
+  .images {
+    flex-direction: column;
+  }
+
+  .imageSlot {
+    height: clamp(170px, 45vh, 260px);
+  }
+}

@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 0;
+  padding: 40px 24px;
 }
 
 .copy {
@@ -53,5 +53,33 @@
 
   &:hover {
     background: var(--color-accent);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 32px 20px;
+  }
+
+  .hello {
+    font-size: 44px;
+    margin-bottom: 16px;
+  }
+
+  .aboutText {
+    height: auto;
+    margin-bottom: 24px;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .button {
+    width: 96px;
+    height: 96px;
+    font-size: 14px;
   }
 }

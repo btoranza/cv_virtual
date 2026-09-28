@@ -135,3 +135,17 @@
   font-size: 14px;
   color: var(--color-ink);
 }
+
+@media (max-width: 720px) {
+  .grid {
+    padding: 24px 20px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .row > * {
+    flex: none;
+  }
+}

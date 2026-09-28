@@ -101,3 +101,14 @@
   color: var(--color-accent);
   font-weight: 600;
 }
+
+@media (max-width: 640px) {
+  .grid {
+    padding: 24px 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

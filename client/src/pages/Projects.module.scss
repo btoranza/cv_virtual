@@ -17,3 +17,9 @@
 .card {
   display: flex;
 }
+
+@media (max-width: 720px) {
+  .grid {
+    padding: 24px 20px;
+  }
+}

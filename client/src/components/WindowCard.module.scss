@@ -74,3 +74,18 @@ ul {
     color: var(--color-accent);
   }
 }
+
+@media (max-width: 640px) {
+  .header {
+    padding: 8px 8px 6px 14px;
+  }
+
+  .title {
+    font-size: 15px;
+    letter-spacing: 0.04em;
+  }
+
+  .body {
+    padding: 14px;
+  }
+}
