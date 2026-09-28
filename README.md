@@ -1,75 +1,92 @@
-# React + TypeScript + Vite
+# CV Virtual — Berenice Toranza
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio / CV personal, hecho como proyecto propio para practicar full-stack: un front-end en React con un diseño tipo "post-it" y ventanas de escritorio, y un backend liviano que envía los mensajes del formulario de contacto por email.
 
-Currently, two official plugins are available:
+🔗 **Sitio en vivo:** [berenice-toranza.dev](https://berenice-toranza.dev)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Preview
 
-## React Compiler
+| Home | CV |
+| --- | --- |
+| ![Home](assets/home.png) | ![CV](assets/cv.png) |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Projects | Contact |
+| --- | --- |
+| ![Projects](assets/projects.png) | ![Contact](assets/contact.png) |
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **3 idiomas** (inglés, francés, español), con contenido separado en datos compartidos + traducidos.
+- **Modo claro/oscuro**, respeta la preferencia del sistema si no hay una guardada.
+- **Selector de paleta de colores** en vivo, con 6 combinaciones predefinidas, persistido en `localStorage`.
+- **Totalmente responsive**: menú hamburguesa en mobile, nav compacta en tablet, grillas de 1 a 3 columnas según el ancho.
+- **Formulario de contacto real**: valida, envía el email vía [Resend](https://resend.com), y muestra un toast + confetti al confirmar.
+- **Descarga de CV en PDF**, con el archivo correcto según el idioma activo.
+- **Proyectos con cards expandibles**, mostrando capturas, stack técnico y links a repo/demo.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Stack técnico
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Frontend** (`client/`)
+- React 19 + TypeScript + Vite
+- SCSS Modules
+- React Router 7
+- [Phosphor Icons](https://phosphoricons.com)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**Backend** (`server/`)
+- Node.js + Express
+- [Resend](https://resend.com) para el envío de emails
+
+## Estructura del proyecto
 
 ```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+cv-virtual/
+├── client/          # Frontend (Vite + React)
+│   └── src/
+│       ├── assets/       # Imágenes de los proyectos mostrados en el portfolio
+│       ├── components/   # Componentes reutilizables (WindowCard, ProjectCard, etc.)
+│       ├── content/       # Contenido en 3 idiomas (shared + en/fr/es)
+│       ├── context/       # Theme, idioma y paleta de colores
+│       ├── layout/         # Header, footer y layout general del sitio
+│       └── pages/          # Home, Resume, Projects, Contact
+└── server/          # Backend (Express)
+    └── src/
+        └── index.ts       # Endpoint /contact que envía el email
 ```
+
+## Correrlo en local
+
+### Frontend
+
+```bash
+cd client
+npm install
+cp .env.example .env
+npm run dev
+```
+
+### Backend
+
+```bash
+cd server
+npm install
+cp .env.example .env
+```
+
+Completá `server/.env` con:
+- `GMAIL_USER`: el email que recibe los mensajes del formulario de contacto.
+- `RESEND_API_KEY`: tu API key de [resend.com](https://resend.com) (plan free alcanza).
+
+```bash
+npm run dev
+```
+
+El frontend corre en `http://localhost:5173` y el backend en `http://localhost:3001`.
+
+## Deploy
+
+- **Frontend**: [Vercel](https://vercel.com), Root Directory `client`.
+- **Backend**: [Render](https://render.com), Root Directory `server`, Build Command `npm install && npm run build`, Start Command `npm start`.
+
+Variables de entorno necesarias en cada plataforma:
+- Vercel: `VITE_API_URL` (la URL del backend en Render).
+- Render: `GMAIL_USER` y `RESEND_API_KEY`.

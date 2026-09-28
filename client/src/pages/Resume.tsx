@@ -131,7 +131,7 @@ export default function Resume() {
         </WindowCard>
       </div>
 
-      <div className={styles.row}>
+      <div className={`${styles.row} ${styles.rowTriple}`}>
         <WindowCard title={content.sectionTitles.education}>
           {content.education.map((entry) => (
             <div key={entry.institution} style={{ marginBottom: 12 }}>

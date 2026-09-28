@@ -1,9 +1,19 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .grid {
   display: flex;
   gap: 24px;
-  padding: 40px;
-  flex: 1;
+  padding: 24px 40px;
   align-items: flex-start;
+}
+
+.spacer {
+  height: 8px;
+  flex-shrink: 0;
 }
 
 .column {
@@ -21,5 +31,9 @@
 @media (max-width: 720px) {
   .grid {
     padding: 24px 20px;
+  }
+
+  .spacer {
+    height: 64px;
   }
 }

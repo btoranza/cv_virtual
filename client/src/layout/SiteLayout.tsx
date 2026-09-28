@@ -1,11 +1,16 @@
-import { useRef } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import {
   CodeIcon,
+  EnvelopeIcon,
+  FileTextIcon,
+  FolderIcon,
   GithubLogoIcon,
   HeartIcon,
   HouseSimpleIcon,
   LinkedinLogoIcon,
+  ListIcon,
+  XIcon,
 } from '@phosphor-icons/react';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSwitcher from '../components/LanguageSwitcher';
@@ -17,6 +22,12 @@ import styles from './SiteLayout.module.scss';
 export default function SiteLayout() {
   const { content } = useLanguage();
   const footerRef = useRef<HTMLElement>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
 
   return (
     <div className={styles.page}>
@@ -31,11 +42,34 @@ export default function SiteLayout() {
               className={styles.heartOutline}
             />
           </span>
-          <span className={styles.name}>{content.name.toUpperCase()}</span>
-          <span className={styles.role}>{content.role}</span>
+          <div className={styles.nameGroup}>
+            <span className={styles.name}>{content.name.toUpperCase()}</span>
+            <span className={styles.role}>{content.role}</span>
+          </div>
         </div>
-        <nav className={styles.nav}>
-          <Link to='/' className={styles.home} aria-label={content.nav.home}>
+
+        <button
+          type='button'
+          className={styles.menuToggle}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          onClick={() => setMenuOpen((current) => !current)}
+        >
+          {menuOpen ? (
+            <XIcon size={22} weight='bold' />
+          ) : (
+            <ListIcon size={22} weight='bold' />
+          )}
+        </button>
+
+        <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
+          <NavLink
+            to='/'
+            end
+            className={({ isActive }) =>
+              `${styles.home} ${isActive ? styles.homeActive : ''}`
+            }
+            aria-label={content.nav.home}
+          >
             <span className={styles.homeIcon}>
               <HouseSimpleIcon
                 size={26}
@@ -48,27 +82,48 @@ export default function SiteLayout() {
                 className={styles.homeOutline}
               />
             </span>
-          </Link>
+            <span className={styles.navLabel}>{content.nav.home}</span>
+          </NavLink>
           <span className={styles.mark} aria-hidden='true' />
-          <Link to='/resume' className={styles.navLink}>
+          <NavLink
+            to='/resume'
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
+            }
+          >
+            <FileTextIcon size={20} weight='regular' className={styles.navIcon} />
             {content.nav.resume}
-          </Link>
+          </NavLink>
           <span className={styles.navDivider} aria-hidden='true'>
             |
           </span>
-          <Link to='/projects' className={styles.navLinkWide}>
+          <NavLink
+            to='/projects'
+            className={({ isActive }) =>
+              `${styles.navLinkWide} ${isActive ? styles.navLinkActive : ''}`
+            }
+          >
+            <FolderIcon size={20} weight='regular' className={styles.navIcon} />
             {content.nav.projects}
-          </Link>
+          </NavLink>
           <span className={styles.navDivider} aria-hidden='true'>
             |
           </span>
-          <Link to='/contact' className={styles.navLinkWide}>
+          <NavLink
+            to='/contact'
+            className={({ isActive }) =>
+              `${styles.navLinkWide} ${isActive ? styles.navLinkActive : ''}`
+            }
+          >
+            <EnvelopeIcon size={20} weight='regular' className={styles.navIcon} />
             {content.nav.contact}
-          </Link>
-          <div className={styles.languageSwitcher}>
-            <LanguageSwitcher />
+          </NavLink>
+          <div className={styles.navTools}>
+            <div className={styles.languageSwitcher}>
+              <LanguageSwitcher />
+            </div>
+            <ThemeToggle />
           </div>
-          <ThemeToggle />
         </nav>
       </header>
 

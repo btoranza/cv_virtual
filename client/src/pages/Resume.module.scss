@@ -136,6 +136,17 @@
   color: var(--color-ink);
 }
 
+@media (max-width: 900px) {
+  .rowTriple {
+    flex-direction: column;
+  }
+
+  .rowTriple > * {
+    flex: none;
+    min-height: 0 !important;
+  }
+}
+
 @media (max-width: 720px) {
   .grid {
     padding: 24px 20px;
@@ -147,5 +158,12 @@
 
   .row > * {
     flex: none;
+    min-height: 0 !important;
+  }
+
+  .aboutList {
+    height: auto;
+    justify-content: flex-start;
+    gap: 10px;
   }
 }

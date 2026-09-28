@@ -21,8 +21,13 @@ function useColumnCount() {
   return columnCount
 }
 
-function ProjectGrid({ content }: { content: CvContent }) {
-  const columnCount = useColumnCount()
+function ProjectGrid({
+  content,
+  columnCount,
+}: {
+  content: CvContent
+  columnCount: number
+}) {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
   const [rowHeights, setRowHeights] = useState<number[]>([])
 
@@ -37,6 +42,7 @@ function ProjectGrid({ content }: { content: CvContent }) {
     }
 
     measure()
+    document.fonts.ready.then(measure)
     window.addEventListener('resize', measure)
     return () => window.removeEventListener('resize', measure)
   }, [columnCount])
@@ -48,35 +54,45 @@ function ProjectGrid({ content }: { content: CvContent }) {
   )
 
   return (
-    <div className={styles.grid}>
-      {columns.map((column, col) => (
-        <div key={col} className={styles.column}>
-          {column.map(({ project, index }) => {
-            const rowHeight = rowHeights[Math.floor(index / columnCount)]
-            return (
-              <div
-                key={project.id}
-                ref={(el) => {
-                  cardRefs.current[index] = el
-                }}
-                className={styles.card}
-                style={rowHeight ? { minHeight: rowHeight } : undefined}
-              >
-                <ProjectCard
-                  project={project}
-                  showMoreLabel={content.nav.showMore}
-                  showLessLabel={content.nav.showLess}
-                />
-              </div>
-            )
-          })}
-        </div>
-      ))}
+    <div className={styles.page}>
+      <div className={styles.grid}>
+        {columns.map((column, col) => (
+          <div key={col} className={styles.column}>
+            {column.map(({ project, index }) => {
+              const rowHeight = rowHeights[Math.floor(index / columnCount)]
+              return (
+                <div
+                  key={project.id}
+                  ref={(el) => {
+                    cardRefs.current[index] = el
+                  }}
+                  className={styles.card}
+                  style={rowHeight ? { minHeight: rowHeight } : undefined}
+                >
+                  <ProjectCard
+                    project={project}
+                    showMoreLabel={content.nav.showMore}
+                    showLessLabel={content.nav.showLess}
+                  />
+                </div>
+              )
+            })}
+          </div>
+        ))}
+      </div>
+      <div className={styles.spacer} />
     </div>
   )
 }
 
 export default function Projects() {
   const { language, content } = useLanguage()
-  return <ProjectGrid key={language} content={content} />
+  const columnCount = useColumnCount()
+  return (
+    <ProjectGrid
+      key={`${language}-${columnCount}`}
+      content={content}
+      columnCount={columnCount}
+    />
+  )
 }
