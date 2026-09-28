@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import {
   CodeIcon,
   EnvelopeIcon,
@@ -26,6 +26,7 @@ export default function SiteLayout() {
   const location = useLocation();
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMenuOpen(false);
   }, [location.pathname]);
 
@@ -91,7 +92,11 @@ export default function SiteLayout() {
               `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`
             }
           >
-            <FileTextIcon size={20} weight='regular' className={styles.navIcon} />
+            <FileTextIcon
+              size={20}
+              weight='regular'
+              className={styles.navIcon}
+            />
             {content.nav.resume}
           </NavLink>
           <span className={styles.navDivider} aria-hidden='true'>
@@ -115,7 +120,11 @@ export default function SiteLayout() {
               `${styles.navLinkWide} ${isActive ? styles.navLinkActive : ''}`
             }
           >
-            <EnvelopeIcon size={20} weight='regular' className={styles.navIcon} />
+            <EnvelopeIcon
+              size={20}
+              weight='regular'
+              className={styles.navIcon}
+            />
             {content.nav.contact}
           </NavLink>
           <div className={styles.navTools}>
