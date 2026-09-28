@@ -1,8 +1,8 @@
 # CV Virtual — Berenice Toranza
 
-Portfolio / CV personal, hecho como proyecto propio para practicar full-stack: un front-end en React con un diseño tipo "post-it" y ventanas de escritorio, y un backend liviano que envía los mensajes del formulario de contacto por email.
+Personal portfolio / CV, built as a self-directed project to practice full-stack development: a React front-end with a "post-it and desktop windows" visual style, and a lightweight backend that sends contact form messages by email.
 
-🔗 **Sitio en vivo:** [berenice-toranza.dev](https://berenice-toranza.dev)
+🔗 **Live site:** [berenice-toranza.dev](https://berenice-toranza.dev)
 
 ## Preview
 
@@ -14,17 +14,17 @@ Portfolio / CV personal, hecho como proyecto propio para practicar full-stack: u
 | --- | --- |
 | ![Projects](assets/projects.png) | ![Contact](assets/contact.png) |
 
-## Funcionalidades
+## Features
 
-- **3 idiomas** (inglés, francés, español), con contenido separado en datos compartidos + traducidos.
-- **Modo claro/oscuro**, respeta la preferencia del sistema si no hay una guardada.
-- **Selector de paleta de colores** en vivo, con 6 combinaciones predefinidas, persistido en `localStorage`.
-- **Totalmente responsive**: menú hamburguesa en mobile, nav compacta en tablet, grillas de 1 a 3 columnas según el ancho.
-- **Formulario de contacto real**: valida, envía el email vía [Resend](https://resend.com), y muestra un toast + confetti al confirmar.
-- **Descarga de CV en PDF**, con el archivo correcto según el idioma activo.
-- **Proyectos con cards expandibles**, mostrando capturas, stack técnico y links a repo/demo.
+- **3 languages** (English, French, Spanish), with content split into shared + translated data.
+- **Light/dark mode**, respects the system preference when nothing is saved yet.
+- **Live color palette picker**, with 6 preset combinations, persisted in `localStorage`.
+- **Fully responsive**: hamburger menu on mobile, compact nav on tablet, 1-to-3 column grids depending on width.
+- **Real contact form**: validates, sends the email via [Resend](https://resend.com), and shows a toast + confetti on success.
+- **CV download as PDF**, serving the right file for the active language.
+- **Expandable project cards**, showing screenshots, tech stack, and links to the repo/demo.
 
-## Stack técnico
+## Tech stack
 
 **Frontend** (`client/`)
 - React 19 + TypeScript + Vite
@@ -34,26 +34,26 @@ Portfolio / CV personal, hecho como proyecto propio para practicar full-stack: u
 
 **Backend** (`server/`)
 - Node.js + Express
-- [Resend](https://resend.com) para el envío de emails
+- [Resend](https://resend.com) for sending emails
 
-## Estructura del proyecto
+## Project structure
 
 ```
 cv-virtual/
 ├── client/          # Frontend (Vite + React)
 │   └── src/
-│       ├── assets/       # Imágenes de los proyectos mostrados en el portfolio
-│       ├── components/   # Componentes reutilizables (WindowCard, ProjectCard, etc.)
-│       ├── content/       # Contenido en 3 idiomas (shared + en/fr/es)
-│       ├── context/       # Theme, idioma y paleta de colores
-│       ├── layout/         # Header, footer y layout general del sitio
+│       ├── assets/       # Images for the projects shown in the portfolio
+│       ├── components/   # Reusable components (WindowCard, ProjectCard, etc.)
+│       ├── content/       # Content in 3 languages (shared + en/fr/es)
+│       ├── context/       # Theme, language and color palette
+│       ├── layout/         # Header, footer and overall site layout
 │       └── pages/          # Home, Resume, Projects, Contact
 └── server/          # Backend (Express)
     └── src/
-        └── index.ts       # Endpoint /contact que envía el email
+        └── index.ts       # /contact endpoint that sends the email
 ```
 
-## Correrlo en local
+## Running it locally
 
 ### Frontend
 
@@ -72,21 +72,21 @@ npm install
 cp .env.example .env
 ```
 
-Completá `server/.env` con:
-- `GMAIL_USER`: el email que recibe los mensajes del formulario de contacto.
-- `RESEND_API_KEY`: tu API key de [resend.com](https://resend.com) (plan free alcanza).
+Fill in `server/.env` with:
+- `GMAIL_USER`: the email address that receives contact form messages.
+- `RESEND_API_KEY`: your API key from [resend.com](https://resend.com) (the free plan is enough).
 
 ```bash
 npm run dev
 ```
 
-El frontend corre en `http://localhost:5173` y el backend en `http://localhost:3001`.
+The frontend runs on `http://localhost:5173` and the backend on `http://localhost:3001`.
 
 ## Deploy
 
 - **Frontend**: [Vercel](https://vercel.com), Root Directory `client`.
 - **Backend**: [Render](https://render.com), Root Directory `server`, Build Command `npm install && npm run build`, Start Command `npm start`.
 
-Variables de entorno necesarias en cada plataforma:
-- Vercel: `VITE_API_URL` (la URL del backend en Render).
-- Render: `GMAIL_USER` y `RESEND_API_KEY`.
+Environment variables needed on each platform:
+- Vercel: `VITE_API_URL` (the backend's URL on Render).
+- Render: `GMAIL_USER` and `RESEND_API_KEY`.
