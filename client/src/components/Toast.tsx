@@ -11,7 +11,10 @@ const AUTO_DISMISS_MS = 5000
 
 export default function Toast({ message, onClose }: ToastProps) {
   const onCloseRef = useRef(onClose)
-  onCloseRef.current = onClose
+
+  useEffect(() => {
+    onCloseRef.current = onClose
+  }, [onClose])
 
   useEffect(() => {
     const timeout = setTimeout(() => onCloseRef.current(), AUTO_DISMISS_MS)

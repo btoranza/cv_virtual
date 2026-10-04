@@ -7,6 +7,8 @@ import projectStarWars1Img from '../assets/projectStarWars1.png'
 import projectStarWars2Img from '../assets/projectStarWars2.png'
 import projectLayout1Img from '../assets/projectLayout1.jpg'
 import projectLayout2Img from '../assets/projectLayout2.jpg'
+import projectTrivia1Img from '../assets/projectTrivia1.png'
+import projectTrivia2Img from '../assets/projectTrivia2.png'
 
 export const shared: SharedContent = {
   name: 'Berenice Toranza',
@@ -34,6 +36,16 @@ export const shared: SharedContent = {
       demoUrl: 'https://bonus-management-system.vercel.app/',
       image: projectBonusImg,
       image2: projectBonus2Img,
+    },
+    {
+      id: 5,
+      name: 'Configurable Trivia Platform',
+      stackFrontend: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+      stackBackend: ['Prisma', 'PostgreSQL'],
+      repoUrl: 'https://github.com/btoranza/trivia-platform',
+      demoUrl: 'https://coding-trivia-bt.vercel.app',
+      image: projectTrivia1Img,
+      image2: projectTrivia2Img,
     },
     {
       id: 3,

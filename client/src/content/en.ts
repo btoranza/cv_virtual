@@ -187,5 +187,10 @@ export const en: TranslatedContent = {
       description:
         'Two front-end markup exercises from hiring processes, combined under one landing page: an animated landing page built with HTML, SCSS and TypeScript, and a laptop catalog page built with plain HTML and CSS. Among my very first projects, but you can already see my attention to detail in a showcase of semantic markup and styling from scratch, without any framework.',
     },
+    {
+      id: 5,
+      description:
+        'A trivia quiz about JavaScript, TypeScript, CSS and HTML, with three cumulative difficulty levels and an explanation after every answer. Players get a shareable result tier at the end. Includes a public submission form so anyone can propose a question, and a password-protected admin page to review, edit, and approve or reject submissions before they join the quiz.',
+    },
   ],
 }

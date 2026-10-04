@@ -30,7 +30,10 @@ interface Particle {
 export default function Confetti({ onDone }: ConfettiProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const onDoneRef = useRef(onDone)
-  onDoneRef.current = onDone
+
+  useEffect(() => {
+    onDoneRef.current = onDone
+  }, [onDone])
 
   useEffect(() => {
     const canvas = canvasRef.current

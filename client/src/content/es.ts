@@ -187,5 +187,10 @@ export const es: TranslatedContent = {
       description:
         'Dos ejercicios de maquetado front-end realizados para procesos de selección, unidos bajo una sola landing page: una landing animada hecha con HTML, SCSS y TypeScript, y una página de catálogo de notebooks hecha con HTML y CSS puro. Entre mis primerísimos trabajos, pero donde ya se nota mi costado detallista, en una muestra de maquetado semántico y estilos desde cero, sin ningún framework.',
     },
+    {
+      id: 5,
+      description:
+        'Un quiz de trivia sobre JavaScript, TypeScript, CSS y HTML, con tres niveles de dificultad acumulativos y una explicación después de cada respuesta. Al final, los jugadores obtienen un resultado por nivel que pueden compartir. Incluye un formulario público para que cualquiera proponga una pregunta, y un panel de administración protegido por contraseña para revisar, editar y aprobar o rechazar esas propuestas antes de que se sumen al quiz.',
+    },
   ],
 }
