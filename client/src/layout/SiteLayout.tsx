@@ -17,6 +17,7 @@ import LanguageSwitcher from '../components/LanguageSwitcher';
 import ThemeToggle from '../components/ThemeToggle';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import ColorPicker from '../components/ColorPicker';
+import ErrorBoundary from '../components/ErrorBoundary';
 import styles from './SiteLayout.module.scss';
 
 export default function SiteLayout() {
@@ -137,7 +138,9 @@ export default function SiteLayout() {
       </header>
 
       <main className={styles.main}>
-        <Outlet />
+        <ErrorBoundary key={location.pathname}>
+          <Outlet />
+        </ErrorBoundary>
         <ScrollToTopButton footerRef={footerRef} />
         <ColorPicker footerRef={footerRef} />
       </main>
