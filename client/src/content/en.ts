@@ -195,7 +195,7 @@ export const en: TranslatedContent = {
     {
       id: 5,
       description:
-        'A trivia quiz about JavaScript, TypeScript, CSS and HTML, with three cumulative difficulty levels and an explanation after every answer. Players get a shareable result tier at the end. Includes a public submission form so anyone can propose a question, and a password-protected admin page to review, edit, and approve or reject submissions before they join the quiz.',
+        "A configurable trivia platform: the topic, difficulty levels, questions per game and result tiers are all driven by a single config file, so the same app can be repurposed for any subject. Includes a public submission form so anyone can propose a question, and a password-protected admin page to review, edit, and approve or reject submissions before they join the quiz. This instance is configured as a frontend development quiz, covering JavaScript, TypeScript, CSS and HTML, with three cumulative difficulty levels and an explanation after every answer.",
     },
   ],
 }

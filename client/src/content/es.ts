@@ -195,7 +195,7 @@ export const es: TranslatedContent = {
     {
       id: 5,
       description:
-        'Un quiz de trivia sobre JavaScript, TypeScript, CSS y HTML, con tres niveles de dificultad acumulativos y una explicación después de cada respuesta. Al final, los jugadores obtienen un resultado por nivel que pueden compartir. Incluye un formulario público para que cualquiera proponga una pregunta, y un panel de administración protegido por contraseña para revisar, editar y aprobar o rechazar esas propuestas antes de que se sumen al quiz.',
+        'Una plataforma de trivia configurable: el tema, los niveles de dificultad, la cantidad de preguntas por partida y los resultados finales se definen desde un único archivo de configuración, así que la misma app se puede reutilizar para cualquier temática. Incluye un formulario público para que cualquiera proponga una pregunta, y un panel de administración protegido por contraseña para revisar, editar y aprobar o rechazar esas propuestas antes de que se sumen al quiz. En este caso está configurada como un quiz de desarrollo frontend, sobre JavaScript, TypeScript, CSS y HTML, con tres niveles de dificultad acumulativos y una explicación después de cada respuesta.',
     },
   ],
 }
