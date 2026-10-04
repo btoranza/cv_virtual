@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import {
   CodeIcon,
   EnvelopeIcon,
@@ -45,7 +45,9 @@ export default function SiteLayout() {
             />
           </span>
           <div className={styles.nameGroup}>
-            <span className={styles.name}>{content.name.toUpperCase()}</span>
+            <Link to='/' className={styles.name}>
+              {content.name.toUpperCase()}
+            </Link>
             <span className={styles.role}>{content.role}</span>
           </div>
         </div>
