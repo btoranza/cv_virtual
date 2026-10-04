@@ -101,6 +101,11 @@ export interface TranslatedContent {
     emailInvalid: string
     messageRequired: string
   }
+  notFound: {
+    title: string
+    message: string
+    backHome: string
+  }
   about: string[]
   education: EducationEntry[]
   experience: ExperienceEntry[]
@@ -156,6 +161,11 @@ export interface CvContent {
     nameRequired: string
     emailInvalid: string
     messageRequired: string
+  }
+  notFound: {
+    title: string
+    message: string
+    backHome: string
   }
   about: string[]
   education: EducationEntry[]

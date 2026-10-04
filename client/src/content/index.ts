@@ -16,6 +16,7 @@ function mergeContent(translated: TranslatedContent): CvContent {
       ...shared.contact,
     },
     contactForm: translated.contactForm,
+    notFound: translated.notFound,
     about: translated.about,
     education: translated.education,
     experience: translated.experience,

@@ -44,6 +44,11 @@ export const es: TranslatedContent = {
     emailInvalid: 'Ingresá un email válido.',
     messageRequired: 'Escribí un mensaje.',
   },
+  notFound: {
+    title: 'Página no encontrada',
+    message: 'La página que buscás no existe o fue movida.',
+    backHome: 'Volver al Inicio',
+  },
   about: [
     'Desarrolladora Full Stack con experiencia, especializada en JavaScript.',
     'Experiencia con metodologías Ágiles y tableros Kanban.',

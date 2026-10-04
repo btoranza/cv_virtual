@@ -44,6 +44,11 @@ export const en: TranslatedContent = {
     emailInvalid: 'Please enter a valid email.',
     messageRequired: 'Please write a message.',
   },
+  notFound: {
+    title: 'Page not found',
+    message: "The page you're looking for doesn't exist or was moved.",
+    backHome: 'Back to Home',
+  },
   about: [
     'Experienced Full Stack Developer, specialized in JavaScript.',
     'Experience with Agile methodologies and Kanban boards.',

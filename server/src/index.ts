@@ -7,8 +7,10 @@ import { validateContactPayload } from "./contact.js";
 
 dotenv.config();
 
+const allowedOrigins = ["https://berenice-toranza.dev", "http://localhost:5173"];
+
 const app = express();
-app.use(cors());
+app.use(cors({ origin: allowedOrigins }));
 app.use(express.json());
 
 const PORT = process.env.PORT || 3001;

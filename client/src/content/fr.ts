@@ -44,6 +44,11 @@ export const fr: TranslatedContent = {
     emailInvalid: 'Merci de renseigner un email valide.',
     messageRequired: 'Merci d\'écrire un message.',
   },
+  notFound: {
+    title: 'Page introuvable',
+    message: "La page que vous cherchez n'existe pas ou a été déplacée.",
+    backHome: "Retour à l'accueil",
+  },
   about: [
     'Développeuse Full Stack expérimentée, spécialisée en JavaScript.',
     'Expérience avec les méthodologies Agile et les tableaux Kanban.',
