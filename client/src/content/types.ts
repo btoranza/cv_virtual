@@ -55,6 +55,8 @@ export interface SharedContent {
 
 export interface TranslatedProject {
   id: number
+  /** Overrides the default name from shared.ts for this language. */
+  name?: string
   description: string
 }
 

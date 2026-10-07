@@ -189,13 +189,14 @@ export const fr: TranslatedContent = {
     },
     {
       id: 4,
+      name: "Intégration web",
       description:
-        "Deux exercices de maquette front-end réalisés pour des processus de recrutement, réunis sous une seule landing page : une landing animée en HTML, SCSS et TypeScript, et une page catalogue d'ordinateurs portables en HTML et CSS pur. Parmi mes tout premiers projets, mais on y voit déjà mon sens du détail, dans une démonstration de markup sémantique et de style réalisés sans aucun framework.",
+        "Deux exercices d'intégration front-end réalisés pour des processus de recrutement, réunis sous une seule landing page : une landing animée en HTML, SCSS et TypeScript, et une page catalogue d'ordinateurs portables en HTML et CSS pur. Parmi mes tout premiers projets, mais on y voit déjà mon sens du détail, dans une démonstration d'HTML sémantique et de styles écrits de zéro, sans aucun framework.",
     },
     {
       id: 5,
       description:
-        "Une plateforme de trivia configurable : le thème, les niveaux de difficulté, le nombre de questions par partie et les paliers de résultat sont définis depuis un seul fichier de configuration, afin que la même application puisse être réutilisée pour n'importe quel sujet. Comprend un formulaire public permettant à chacun de proposer une question, ainsi qu'une page d'administration protégée par mot de passe pour relire, modifier et approuver ou rejeter ces propositions avant qu'elles ne rejoignent le quiz. Dans ce cas, elle est configurée comme un quiz de développement frontend, sur JavaScript, TypeScript, CSS et HTML, avec trois niveaux de difficulté cumulatifs et une explication après chaque réponse.",
+        "Une plateforme de trivia configurable : thème, niveaux, questions par partie et paliers de résultat viennent d'un seul fichier de configuration, donc une même application convient à tout sujet. Les joueurs choisissent un niveau ou un mélange aléatoire, lisent une explication après chaque réponse et partagent leur résultat en image. Les visiteurs envoient questions et commentaires ; une page d'administration protégée par mot de passe les modifie, approuve ou rejette, suit les statistiques de jeu et reçoit des alertes Discord. Cette instance est un quiz de développement frontend à trois niveaux cumulatifs.",
     },
   ],
 }

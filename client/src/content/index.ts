@@ -26,6 +26,7 @@ function mergeContent(translated: TranslatedContent): CvContent {
       const translation = translated.projects.find((p) => p.id === project.id)
       return {
         ...project,
+        name: translation?.name ?? project.name,
         description: translation?.description ?? '',
       }
     }),

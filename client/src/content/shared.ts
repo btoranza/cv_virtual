@@ -40,8 +40,8 @@ export const shared: SharedContent = {
     {
       id: 5,
       name: 'Configurable Trivia Platform',
-      stackFrontend: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
-      stackBackend: ['Prisma', 'PostgreSQL'],
+      stackFrontend: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vitest'],
+      stackBackend: ['Prisma', 'PostgreSQL', 'Discord Webhooks', 'GitHub Actions'],
       repoUrl: 'https://github.com/btoranza/trivia-platform',
       demoUrl: 'https://coding-trivia-bt.vercel.app',
       image: projectTrivia1Img,
@@ -69,7 +69,7 @@ export const shared: SharedContent = {
     },
     {
       id: 4,
-      name: 'Maquetado',
+      name: 'Front-End Markup',
       stackFrontend: ['HTML', 'CSS', 'SCSS', 'TypeScript'],
       stackBackend: [],
       repoUrl: 'https://github.com/btoranza/maquetado',

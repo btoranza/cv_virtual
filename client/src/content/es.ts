@@ -189,13 +189,14 @@ export const es: TranslatedContent = {
     },
     {
       id: 4,
+      name: 'Maquetado',
       description:
         'Dos ejercicios de maquetado front-end realizados para procesos de selección, unidos bajo una sola landing page: una landing animada hecha con HTML, SCSS y TypeScript, y una página de catálogo de notebooks hecha con HTML y CSS puro. Entre mis primerísimos trabajos, pero donde ya se nota mi costado detallista, en una muestra de maquetado semántico y estilos desde cero, sin ningún framework.',
     },
     {
       id: 5,
       description:
-        'Una plataforma de trivia configurable: el tema, los niveles de dificultad, la cantidad de preguntas por partida y los resultados finales se definen desde un único archivo de configuración, así que la misma app se puede reutilizar para cualquier temática. Incluye un formulario público para que cualquiera proponga una pregunta, y un panel de administración protegido por contraseña para revisar, editar y aprobar o rechazar esas propuestas antes de que se sumen al quiz. En este caso está configurada como un quiz de desarrollo frontend, sobre JavaScript, TypeScript, CSS y HTML, con tres niveles de dificultad acumulativos y una explicación después de cada respuesta.',
+        'Una plataforma de trivia configurable: tema, niveles, preguntas por partida y rangos de resultado salen de un único archivo de configuración, así que una misma app sirve para cualquier temática. Los jugadores eligen un nivel o una mezcla aleatoria, leen una explicación tras cada respuesta y comparten su resultado como imagen. Los visitantes envían preguntas y comentarios; un panel de administración con contraseña los edita, aprueba o rechaza, registra estadísticas de juego y recibe avisos en Discord. Esta instancia es un quiz de desarrollo frontend con tres niveles acumulativos.',
     },
   ],
 }

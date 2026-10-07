@@ -195,7 +195,7 @@ export const en: TranslatedContent = {
     {
       id: 5,
       description:
-        "A configurable trivia platform: the topic, difficulty levels, questions per game and result tiers are all driven by a single config file, so the same app can be repurposed for any subject. Includes a public submission form so anyone can propose a question, and a password-protected admin page to review, edit, and approve or reject submissions before they join the quiz. This instance is configured as a frontend development quiz, covering JavaScript, TypeScript, CSS and HTML, with three cumulative difficulty levels and an explanation after every answer.",
+        "A configurable trivia platform: topic, levels, questions per game and result tiers come from one config file, so one app fits any subject. Players pick a level or a random mix, read an explanation after each answer and share their result as an image. Visitors submit questions and feedback; a password-protected admin edits, approves or rejects them, tracks play stats and gets Discord alerts. This instance is a frontend quiz with three cumulative levels.",
     },
   ],
 }
