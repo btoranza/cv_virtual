@@ -12,7 +12,10 @@
 }
 
 .spacer {
-  height: 8px;
+  // Los botones flotantes (colores y subir) se traban 16px sobre el borde de
+  // abajo del contenido y miden 44px: hacen falta 60px libres, más aire,
+  // para que no tapen la última tarjeta. Sumado al padding de .grid (24px).
+  height: 64px;
   flex-shrink: 0;
 }
 
@@ -32,9 +35,5 @@
 @media (max-width: 720px) {
   .grid {
     padding: 24px 20px;
-  }
-
-  .spacer {
-    height: 64px;
   }
 }

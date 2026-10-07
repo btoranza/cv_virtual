@@ -115,9 +115,18 @@
   font-weight: 600;
 }
 
+// Los botones flotantes (colores y subir) se traban 16px sobre el borde de
+// abajo y miden 44px: con la tarjeta a todo el ancho necesitan ~60px libres,
+// más aire. Igual que el espacio de abajo de Projects y Resume en móvil.
+@media (max-width: 720px) {
+  .grid {
+    padding-bottom: 88px;
+  }
+}
+
 @media (max-width: 640px) {
   .grid {
-    padding: 24px 20px;
+    padding: 24px 20px 88px;
   }
 
   .row {
