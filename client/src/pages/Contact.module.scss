@@ -129,6 +129,11 @@
     padding: 24px 20px 88px;
   }
 
+  // Campo del mensaje un poco más bajo en móvil (120px en escritorio).
+  .textarea {
+    min-height: 96px;
+  }
+
   .row {
     flex-direction: column;
     gap: 0;
