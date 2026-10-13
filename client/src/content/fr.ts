@@ -174,16 +174,19 @@ export const fr: TranslatedContent = {
   projects: [
     {
       id: 1,
+      name: 'Système de Gestion des Primes',
       description:
         "Application web full-stack qui simule une organisation commerciale réelle, avec plusieurs équipes, des règles de primes configurables et des tableaux de bord interactifs. Les utilisateurs peuvent créer et gérer des ventes et des clients directement dans l'application. Elle automatise le calcul des primes mensuelles selon la performance des ventes, suit la progression de chaque commercial et de chaque équipe par rapport à leurs objectifs, et donne aux services financiers une visibilité claire sur les métriques de vente et la rémunération.",
     },
     {
       id: 2,
+      name: 'Système de Gestion de Véhicules',
       description:
         "Application React pour gérer un registre de véhicules, permettant de créer, modifier et supprimer des fiches avec des champs comme la marque, le modèle, la couleur et la plaque d'immatriculation. Fonctionne entièrement côté client, avec validation de formulaire et édition en ligne, réalisée comme test technique pour D3 Sistemas. L'un de mes tout premiers projets React, au début de ma reconversion vers le développement.",
     },
     {
       id: 3,
+      name: 'Test Frontend Star Wars',
       description:
         "Application React + TypeScript qui récupère des personnages Star Wars depuis une API simulée et affiche une liste paginée et consultable par recherche. Inclut une recherche en temps réel avec debouncing, la pagination, et des états de chargement, vide et d'erreur bien gérés.",
     },
@@ -195,6 +198,7 @@ export const fr: TranslatedContent = {
     },
     {
       id: 5,
+      name: 'Plateforme de Trivia Configurable',
       description:
         "Une plateforme de trivia configurable : thème, niveaux, questions par partie et paliers de résultat viennent d'un seul fichier de configuration, donc une même application convient à tout sujet. Les joueurs choisissent un niveau ou un mélange aléatoire, lisent une explication après chaque réponse et partagent leur résultat en image. Les visiteurs envoient questions et commentaires ; une page d'administration protégée par mot de passe les modifie, approuve ou rejette, suit les statistiques de jeu et reçoit des alertes Discord. Cette instance est un quiz de développement frontend à trois niveaux cumulatifs.",
     },

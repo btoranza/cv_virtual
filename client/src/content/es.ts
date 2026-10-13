@@ -174,16 +174,19 @@ export const es: TranslatedContent = {
   projects: [
     {
       id: 1,
+      name: 'Sistema de Gestión de Bonos',
       description:
         'Aplicación web full-stack que simula una organización de ventas real, con múltiples equipos, reglas de bonos configurables y dashboards interactivos. Los usuarios pueden crear y gestionar ventas y clientes directamente en la aplicación. Automatiza el cálculo de bonos mensuales según la performance de ventas, trackea el progreso de cada vendedor y de cada equipo contra sus objetivos, y le da a finanzas visibilidad clara sobre las métricas de ventas y la compensación.',
     },
     {
       id: 2,
+      name: 'Sistema de Administración de Vehículos',
       description:
         'Aplicación en React para gestionar un registro de vehículos, permitiendo crear, editar y eliminar registros con campos como marca, modelo, color y patente. Funciona completamente del lado del cliente, con validación de formularios y edición inline, hecha como prueba técnica para D3 Sistemas. Uno de mis primerísimos proyectos en React, al comienzo de mi transición al desarrollo.',
     },
     {
       id: 3,
+      name: 'Prueba Frontend de Star Wars',
       description:
         'Aplicación en React + TypeScript que trae personajes de Star Wars desde una API simulada y muestra una lista paginada y con búsqueda. Incluye búsqueda en tiempo real con debouncing, paginación, y estados de carga, vacío y error bien manejados.',
     },
@@ -195,6 +198,7 @@ export const es: TranslatedContent = {
     },
     {
       id: 5,
+      name: 'Plataforma de Trivia Configurable',
       description:
         'Una plataforma de trivia configurable: tema, niveles, preguntas por partida y rangos de resultado salen de un único archivo de configuración, así que una misma app sirve para cualquier temática. Los jugadores eligen un nivel o una mezcla aleatoria, leen una explicación tras cada respuesta y comparten su resultado como imagen. Los visitantes envían preguntas y comentarios; un panel de administración con contraseña los edita, aprueba o rechaza, registra estadísticas de juego y recibe avisos en Discord. Esta instancia es un quiz de desarrollo frontend con tres niveles acumulativos.',
     },
