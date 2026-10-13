@@ -1,6 +1,6 @@
 .switcher {
   display: inline-flex;
-  border: 2px solid var(--color-ink);
+  border: 2px solid var(--color-border);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -16,7 +16,7 @@
   cursor: pointer;
 
   &:not(:last-child) {
-    border-right: 2px solid var(--color-ink);
+    border-right: 2px solid var(--color-border);
   }
 }
 

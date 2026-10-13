@@ -16,6 +16,8 @@
      en los dos temas a propósito: como el rosa no cambia con el tema, el
      color que va encima tampoco puede cambiar, o pierde contraste. */
   --color-on-accent: #000000;
+  --color-border: var(--color-ink);
+  --color-highlight: var(--color-primary);
   --font-heading: 'CocomatPro', sans-serif;
   --font-body: 'Raleway', sans-serif;
 
@@ -29,6 +31,8 @@
 :root[data-theme='dark'] {
   --color-surface: #1c1518;
   --color-ink: #f5eee6;
+  --color-border: color-mix(in srgb, var(--color-accent) 75%, black);
+  --color-highlight: var(--color-border);
   color-scheme: dark;
 }
 
