@@ -63,7 +63,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: var(--color-ink);
+  color: var(--color-border);
 }
 
 // Ícono decorativo de la identidad. weight="bold" es un solo trazo de
@@ -85,14 +85,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: var(--color-accent);
+  color: var(--color-heart-fill);
 }
 
 .heartOutline {
   position: absolute;
   top: 0;
   left: 0;
-  color: var(--color-ink);
+  color: var(--color-border);
 }
 
 .mark {

@@ -18,6 +18,7 @@
   --color-on-accent: #000000;
   --color-border: var(--color-ink);
   --color-highlight: var(--color-primary);
+  --color-heart-fill: var(--color-accent);
   --font-heading: 'CocomatPro', sans-serif;
   --font-body: 'Raleway', sans-serif;
 
@@ -33,6 +34,7 @@
   --color-ink: #f5eee6;
   --color-border: color-mix(in srgb, var(--color-accent) 75%, black);
   --color-highlight: var(--color-border);
+  --color-heart-fill: var(--color-primary);
   color-scheme: dark;
 }
 
